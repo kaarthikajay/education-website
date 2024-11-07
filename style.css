@@ -1,0 +1,130 @@
+body{
+    background-color: rgba(34, 38, 41, 1);
+}
+.bg{
+    padding-top: 120px;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+}
+#header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 15px;
+    padding-top:10px;
+}
+.login{
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    background-color: rgba(216, 120, 7, 1);
+    padding: 10px;
+    box-shadow: 0px 8px 12px rgba(255, 188, 5, 0.5);
+    border-radius: 20px;
+    font-style: roboto;
+    opacity: .8;
+    }
+.login:hover{
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+a{
+    text-decoration: none;
+ color: white;   
+}
+li{
+    list-style-type: none;
+    display: inline;
+    margin-left:0px;
+    margin-right: 100px;
+}
+#ex{
+    size: 30px;
+    color: white;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+#logintxt{
+    width: 70px;
+    text-decoration: none;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    font-size: larger;
+    text-align: center;
+    margin-right: 20px;
+    padding: 10px;
+    background-color: greenyellow;
+    border: 2px solid black;
+    border-radius: 20px;
+    opacity: 0.5;
+    transition: 0.3s;
+
+}
+a:hover{
+    color: coral;
+}
+#one{
+    text-decoration: none;
+ color: coral;   
+}
+#logintxt:hover{
+    color: black;
+    opacity: 1;
+}
+
+
+/* Fade In Effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#header, .navbar {
+    animation: fadeIn 1s ease-in;
+}
+
+/* Button Hover Effect */
+button.login {
+    background-color: coral; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button.login:hover {
+    background-color: coral; /* Darker green */
+    transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+/* Image Animation */
+img {
+    animation: zoomIn 1s ease-in;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

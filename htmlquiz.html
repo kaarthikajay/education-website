@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <a href="index.html"><img src="images/small logo.png" alt="logo"></a>
+            
+        </div>
+        <hr>
+        <a href="html.html"><img src="/images/backbtn.png"></a>
+        </div>
+        <br>
+        <br>
+
+        <h1>HTML Quiz</h1>
+  <form id="quizForm">
+    <div class="question">
+      <p>1. What does HTML stand for?</p>
+      <input type="radio" name="q1" value="A"> Hyperlinks and Text Markup Language<br>
+      <input type="radio" name="q1" value="B"> Hyper Text Markup Language<br>
+      <input type="radio" name="q1" value="C"> Home Tool Markup Language<br>
+    </div>
+
+    <div class="question">
+      <p>2. Who is making the Web standards?</p>
+      <input type="radio" name="q2" value="A"> Google<br>
+      <input type="radio" name="q2" value="B"> Microsoft<br>
+      <input type="radio" name="q2" value="C"> The World Wide Web Consortium<br>
+    </div>
+
+    <div class="question">
+        <p>3. Which HTML tag is used to define an internal style sheet?</p>
+        <input type="radio" name="q3" value="A"> &lt;css&gt;<br>
+        <input type="radio" name="q3" value="B"> &lt;style&gt;<br>
+        <input type="radio" name="q3" value="C"> &lt;script&gt;<br>
+      </div>
+
+      <div class="question">
+        <p>4. What is the correct HTML element for inserting a line break?</p>
+        <input type="radio" name="q4" value="A"> &lt;break&gt;<br>
+        <input type="radio" name="q4" value="B"> &lt;br&gt;<br>
+        <input type="radio" name="q4" value="C"> &lt;lb&gt;<br>
+      </div>
+
+      <div class="question">
+        <p>5. Which HTML element is used to define the largest heading?</p>
+        <input type="radio" name="q5" value="A"> &lt;heading&gt;<br>
+        <input type="radio" name="q5" value="B"> &lt;h6&gt;<br>
+        <input type="radio" name="q5" value="C"> &lt;h1&gt;<br>
+      </div>
+
+      <div class="question">
+        <p>6. What is the correct HTML element for adding a background color?</p>
+        <input type="radio" name="q6" value="A"> &lt;background&gt;<br>
+        <input type="radio" name="q6" value="B"> &lt;body style="background-color:yellow;"&gt;<br>
+        <input type="radio" name="q6" value="C"> &lt;color&gt;<br>
+      </div>
+
+      <div class="question">
+        <p>7. Which HTML tag is used to make text bold?</p>
+        <input type="radio" name="q7" value="A"> &lt;b&gt;<br>
+        <input type="radio" name="q7" value="B"> &lt;bold&gt;<br>
+        <input type="radio" name="q7" value="C"> &lt;strong&gt;<br>
+      </div>
+
+      <div class="question">
+        <p>8. How can you create an email link in HTML?</p>
+        <input type="radio" name="q8" value="A"> &lt;a href="mailto:example@example.com"&gt;Send Email&lt;/a&gt;<br>
+        <input type="radio" name="q8" value="B"> &lt;mail href="example@example.com"&gt;Send Email&lt;/mail&gt;<br>
+        <input type="radio" name="q8" value="C"> &lt;a href="email@example.com"&gt;Send Email&lt;/a&gt;<br>
+      </div>
+
+      <div class="question">
+        <p>9. Which attribute is used to specify an alternate text for an image, if the image cannot be displayed?</p>
+        <input type="radio" name="q9" value="A"> title<br>
+        <input type="radio" name="q9" value="B"> src<br>
+        <input type="radio" name="q9" value="C"> alt<br>
+      </div>
+
+
+
+    <!-- Add more questions following the same pattern -->
+
+    <div class="question">
+      <p>10. Which tag is used to define an unordered list?</p>
+      <input type="radio" name="q10" value="A"> &lt;ul&gt;<br>
+      <input type="radio" name="q10" value="B"> &lt;ol&gt;<br>
+      <input type="radio" name="q10" value="C"> &lt;li&gt;<br>
+    </div>
+
+    <button type="button" onclick="calculateScore()">Submit Quiz</button>
+  </form>
+
+  <div class="result" id="result"></div>
+
+  <script>
+    function calculateScore() {
+  // Correct answers
+  const answers = {
+    q1: "B",
+    q2: "C",
+    q3: "B",
+    q4: "B",
+    q5: "C",
+    q6: "B",
+    q7: "A",
+    q8: "A",
+    q9: "C",
+    q10: "A"
+  };
+
+  let htmlscore = 0;
+
+  // Loop through each question and check the answer
+  for (let i = 1; i <= 10; i++) {
+    const question = document.querySelector(`input[name="q${i}"]:checked`);
+    if (question && question.value === answers[`q${i}`]) {
+      htmlscore++;
+    }
+  }
+  // Display the score
+  let resultText = `Your score is: ${htmlscore} out of 10\n`;
+
+  // Recommendations based on score
+  if (htmlscore === 10) {
+    resultText += "Excellent! You have a great understanding of HTML.";
+  } else if (htmlscore >= 7) {
+    resultText += "Good job! You have a solid understanding of HTML.";
+  } else if (htmlscore >= 4) {
+    resultText += "Not bad! You might want to review some HTML concepts.";
+  } else {
+    resultText += "Keep practicing! Consider taking an HTML course or reviewing the basics.";
+  }
+
+  document.getElementById('result').innerText = resultText;
+  alert(resultText);
+}
+  </script>
+
+</body>
+</html>

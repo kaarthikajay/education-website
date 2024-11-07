@@ -1,0 +1,135 @@
+#header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 15px;
+    padding-top:10px;
+}
+body{
+    background-color: rgba(34, 38, 41, 1);
+}
+a{
+    text-decoration: none;
+ color: white;   
+}
+li{
+    list-style-type: none;
+    display: inline;
+    margin-left:0px;
+    margin-right: 100px;
+}
+
+.btn{
+    height: 50px;
+    width: 150px;
+    text-align: center;
+    color: black;
+    font-size: 16px;
+    background-color: rgb(140, 209, 28);
+    padding: 10px;
+    font-size: larger;
+    border-radius: 20px;
+    font-style: roboto;
+    font-family: cursive;
+    float: right;
+    margin-right: 35px;
+}
+.box {
+    background-color: white;
+    height: 320px;
+    width: 95vw;
+    margin-left: 25px;
+    border-radius: 20px;
+    margin-top: 10px;
+    position: relative;
+    animation: slidein 2s;
+}
+@keyframes slidein{
+    0%{transform: translate(-50%);}
+    50%{transform: translate(0%);}
+}
+h2{
+    color: black;
+    font-size: 25px;
+    font-family:"Gill Sans", sans-serif;
+    padding-top: 5px;
+    padding-left: 10px;
+    font-style: italic;
+    font-weight: bold;
+}
+#web{
+    height: 250px;
+    width: 350px;
+    margin-bottom: 25px;
+    padding-left: 10px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+#pre2{
+    color: black;
+    font-family: "Gill Sans", sans-serif;
+    font-size: 30px;
+    display: inline;
+    margin-top: -30px;
+}
+.inline-container {
+    display: flex;
+    align-items: center;
+}
+.btn2 {
+    height: 50px;
+    width: 250px;
+    text-align: center;
+    color: white;
+    font-size: larger;
+    font-size: 16px;
+    background-color: rgba(216, 120, 7, 1);
+    padding: 10px;
+    font-size: larger;
+    border-radius: 20px;
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    margin: 0;
+    float: none;
+}
+a:hover{
+    color: coral;
+}
+#one{
+    text-decoration: none;
+ color: coral;   
+}
+#pre1{
+    overflow: hidden;
+    white-space: nowrap;
+    
+    animation: typing 4s steps(40, end) ;
+    animation-iteration-count: 1;
+    margin-bottom: 0;
+    color: white;
+    font-family: monospace;
+    font-size: 45px;
+    font-weight: bolder;
+}
+#pre3{
+    overflow: hidden;
+    white-space: nowrap;
+    animation-delay: 4s;
+    animation: typing 4s steps(40, end);
+    color: white;
+    font-family: monospace;
+    font-size: 45px;
+    font-weight: bolder;
+}
+@keyframes typing{
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}

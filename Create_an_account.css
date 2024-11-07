@@ -1,0 +1,245 @@
+body{
+    background-color: rgba(34, 38, 41, 1);
+}
+header{
+    background-color: rgba(34, 38, 41, 1);
+    margin-top: 15px;
+    padding-top:10px;
+}.btn{
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    color: black;
+    font-size: 16px;
+    background-color: rgb(140, 209, 28);
+    padding: 10px;
+    font-size: larger;
+    border-radius: 20px;
+    font-style: roboto;
+    font-family: cursive;
+}
+.box{
+    background-color: rgba(34, 38, 41, 1);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+
+    padding-bottom: 150px;
+}
+#inner{
+    height: 650px;
+    width: 500px;
+    background-color:rgba(0, 0, 0, 1);
+    text-align: center;
+    border: 2px solid rgba(216, 120, 7, 1);
+    border-radius: 20px;
+}
+#logo2{
+    margin-top: 20px;
+    height: 50px;
+}
+h3{
+    color: white;
+    font-size: 20px;
+    padding-right: 350px;
+    font-family:cursive;
+}
+#username{
+    margin: 0 auto;
+    display: block;
+    border: 2px solid rgba(216, 120, 7, 1);
+    height: 30px;
+    width: 400px;
+    border-radius: 20px;
+}
+#password{
+    margin: 0 auto;
+    display: block;
+    border: 2px solid rgba(216, 120, 7, 1);
+    height: 30px;
+    width: 400px;
+    border-radius: 20px;
+}
+h2{
+    color: white;
+    font-size: 20px;
+    padding-right: 390px;
+    font-family:cursive;
+}
+.form-control {
+    position: relative;
+    margin:  0 auto;
+    width: 350px;  }
+  
+  .form-control input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px #fff solid;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #fff;
+  }
+  
+  .form-control input:focus,
+  .form-control input:valid {
+    outline: 0;
+    border-bottom-color: lightblue;
+  }
+  
+  .form-control label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    pointer-events: none;
+  }
+  
+  .form-control label span {
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    color: #fff;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .form-control input:focus+label span,
+  .form-control input:valid+label span {
+    color: lightblue;
+    transform: translateY(-30px);
+  }
+  /* From Uiverse.io by OliverZeros */ 
+button {
+  all: unset;
+}
+
+.button {
+  position: relative;
+  display: inline-flex;
+  height: 3.5rem;
+  align-items: center;
+  border-radius: 9999px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-family: Segoe UI;
+  font-size: 1.2rem;
+  font-weight: 640;
+  color: #fafaf6;
+  letter-spacing: -0.06em;
+}
+
+.button-item {
+  background-color: transparent;
+  color: #1d1d1f;
+}
+
+.button-item .button-bg {
+  border-color: rgba(255, 208, 116);
+  background-color: rgba(255, 208, 116);
+}
+
+.button-inner,
+.button-inner-hover,
+.button-inner-static {
+  pointer-events: none;
+  display: block;
+}
+
+.button-inner {
+  position: relative;
+}
+
+.button-inner-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: translateY(70%);
+}
+
+.button-bg {
+  overflow: hidden;
+  border-radius: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  transition: transform 1.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.button-bg,
+.button-bg-layer,
+.button-bg-layers {
+  display: block;
+}
+
+.button-bg-layers {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: -60%;
+  aspect-ratio: 1 / 1;
+  width: max(200%, 10rem);
+}
+
+.button-bg-layer {
+  border-radius: 9999px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(0);
+}
+
+.button-bg-layer.-purple {
+  background-color: rgba(163, 116, 255);
+}
+
+.button-bg-layer.-turquoise {
+  background-color: rgba(23, 241, 209);
+}
+
+.button-bg-layer.-yellow {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 208, 116, var(--tw-bg-opacity));
+}
+
+.button:hover .button-inner-static {
+  opacity: 0;
+  transform: translateY(-70%);
+  transition:
+    transform 1.4s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 0.3s linear;
+}
+
+.button:hover .button-inner-hover {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    transform 1.4s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 1.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.button:hover .button-bg-layer {
+  transition:
+    transform 1.3s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 0.3s linear;
+}
+
+.button:hover .button-bg-layer-1 {
+  transform: scale(1);
+}
+
+.button:hover .button-bg-layer-2 {
+  transition-delay: 0.1s;
+  transform: scale(1);
+}
+
+.button:hover .button-bg-layer-3 {
+  transition-delay: 0.2s;
+  transform: scale(1);
+}

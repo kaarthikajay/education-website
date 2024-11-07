@@ -1,0 +1,92 @@
+body{
+    background-color: rgba(34, 38, 41, 1);
+}
+#main{
+    width: 100vw;
+    position: fixed;
+    background-color: rgba(34, 38, 41, 1);
+}
+h1{
+    color: white;
+    font-size: 60px;
+    text-align: center;
+}
+p{
+    color: white;
+    font-size: 30px;
+}
+h4{
+    color: white;
+    font-size: 30px;
+}
+a{
+    text-decoration: none;
+    font-size: 25px;
+    color: rgba(216, 120, 7, 1);
+}
+
+/* From Uiverse.io by vinodjangid07 */ 
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 32px;
+    background-color: rgb(230, 157, 20);
+    border: 8px solid #c0dfff;
+    color: white;
+    gap: 8px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    scale: 0.6;
+  }
+  .text {
+    font-size: 1.7em;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  .svg {
+    padding-top: 5px;
+    height: 100%;
+    width: fit-content;
+  }
+  .svg svg {
+    width: 50px;
+    height: 30px;
+  }
+  .button:hover {
+    border: 8px solid #b1d8ff;
+    background-color: rgb(230, 157, 20);
+  }
+  .button:active {
+    border: 5px solid #c0dfff;
+  }
+  .button:hover .svg svg {
+    animation: jello-vertical 0.9s both;
+    transform-origin: left;
+  }
+  
+  @keyframes jello-vertical {
+    0% {
+      transform: scale3d(1, 1, 1);
+    }
+    30% {
+      transform: scale3d(0.75, 1.25, 1);
+    }
+    40% {
+      transform: scale3d(1.25, 0.75, 1);
+    }
+    50% {
+      transform: scale3d(0.85, 1.15, 1);
+    }
+    65% {
+      transform: scale3d(1.05, 0.95, 1);
+    }
+    75% {
+      transform: scale3d(0.95, 1.05, 1);
+    }
+    100% {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <a href="index.html"><img src="images/small logo.png" alt="logo"></a>
+            
+        </div>
+        <hr>
+        <a href="css.html"><img src="/images/backbtn.png"></a>
+        </div>
+        <br>
+        <br>
+    <h1>CSS Quiz</h1>
+  <form id="quizForm">
+    <div class="question">
+      <p>1. What does CSS stand for?</p>
+      <input type="radio" name="q1" value="A"> Computer Style Sheets<br>
+      <input type="radio" name="q1" value="B"> Cascading Style Sheets<br>
+      <input type="radio" name="q1" value="C"> Creative Style Sheets<br>
+    </div>
+
+    <div class="question">
+      <p>2. Which CSS property is used to change the background color of an element?</p>
+      <input type="radio" name="q2" value="A"> color<br>
+      <input type="radio" name="q2" value="B"> bgcolor<br>
+      <input type="radio" name="q2" value="C"> background-color<br>
+    </div>
+
+    <div class="question">
+        <p>3. How do you add a background color for all &lt;h1&gt; elements?</p>
+        <input type="radio" name="q3" value="A">h1 {background-color: yellow;}<br>
+        <input type="radio" name="q3" value="B">h1.all {background-color: yellow;}<br>
+        <input type="radio" name="q3" value="C">h1 {color: yellow;} <br>
+      </div>
+
+      <div class="question">
+        <p>4. Which property is used to change the text color of an element?</p>
+        <input type="radio" name="q4" value="A"> fgcolor<br>
+        <input type="radio" name="q4" value="B"> text-color<br>
+        <input type="radio" name="q4" value="C"> color<br>
+      </div>
+
+      <div class="question">
+        <p>5. Which CSS property controls the text size?</p>
+        <input type="radio" name="q5" value="A"> font-style<br>
+        <input type="radio" name="q5" value="B"> text-size<br>
+        <input type="radio" name="q5" value="C"> font-size<br>
+      </div>
+
+      <div class="question">
+        <p>6. How do you select an element with the ID header in CSS?</p>
+        <input type="radio" name="q6" value="A"> .header<br>
+        <input type="radio" name="q6" value="B"> #header<br>
+        <input type="radio" name="q6" value="C"> header<br>
+      </div>
+
+      <div class="question">
+        <p>7. Which CSS property is used to create space between the content and the border of an element?</p>
+        <input type="radio" name="q7" value="A"> spacing<br>
+        <input type="radio" name="q7" value="B"> margin<br>
+        <input type="radio" name="q7" value="C"> padding<br>
+      </div>
+
+      <div class="question">
+        <p>8. What is the correct CSS syntax for making all <p> elements bold?</p>
+        <input type="radio" name="q8" value="A"> &lt;p style="font-weight: bold;"&gt;<br>
+        <input type="radio" name="q8" value="B"> p {font-weight: bold;}<br>
+        <input type="radio" name="q8" value="C"> p {text-weight: bold;}<br>
+      </div>
+
+      <div class="question">
+        <p>9. Which CSS property is used to control the element’s font?</p>
+        <input type="radio" name="q9" value="A">font-family<br>
+        <input type="radio" name="q9" value="B">font-style<br>
+        <input type="radio" name="q9" value="C">font-text<br>
+      </div>
+
+
+
+    <!-- Add more questions following the same pattern -->
+
+    <div class="question">
+      <p>10. Which tag is used to define an unordered list?</p>
+      <input type="radio" name="q10" value="A"> &lt;ul&gt;<br>
+      <input type="radio" name="q10" value="B"> &lt;ol&gt;<br>
+      <input type="radio" name="q10" value="C"> &lt;li&gt;<br>
+    </div>
+
+    <button type="button" onclick="calculateScore()">Submit Quiz</button>
+  </form>
+
+  <div class="result" id="result"></div>
+
+
+  <script>
+    function calculateScore() {
+  // Correct answers
+  const answers = {
+        q1: "B",
+        q2: "C",
+        q3: "A",
+        q4: "C",
+        q5: "C",
+        q6: "B",
+        q7: "C",
+        q8: "B",
+        q9: "A",
+        // Add the rest of the correct answers here
+        q10: "C"
+      };
+
+
+  let score = 0;
+
+  // Loop through each question and check the answer
+  for (let i = 1; i <= 10; i++) {
+    const question = document.querySelector(`input[name="q${i}"]:checked`);
+    if (question && question.value === answers[`q${i}`]) {
+      score++;
+    }
+  }
+
+   // Display the score
+   let resultText = `Your score is: ${score} out of 10\n`;
+
+// Recommendations based on score
+if (score === 10) {
+  resultText += "Excellent! You have a great understanding of CSS.";
+} else if (score >= 7) {
+  resultText += "Good job! You have a solid understanding of CSS.";
+} else if (score >= 4) {
+  resultText += "Not bad! You might want to review some CSS concepts.";
+} else {
+  resultText += "Keep practicing! Consider taking an CSS course or reviewing the basics.";
+}
+
+document.getElementById('result').innerText = resultText;
+alert(resultText);
+}
+  </script>
+
+</body>
+</html>
